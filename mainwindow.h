@@ -26,7 +26,7 @@ private:
 
     QThread m_thread;
 
-    Worker m_worker;
+    WorkerB m_worker;
 };
 
 #endif // MAINWINDOW_H
