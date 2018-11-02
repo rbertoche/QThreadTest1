@@ -38,12 +38,12 @@ private:
     QNetworkAccessManager *m_net2;
 };
 
-class Worker : public QObject
+class WorkerB : public QObject
 {
     Q_OBJECT
 public:
-    explicit Worker(QObject *parent = 0);
-    ~Worker();
+    explicit WorkerB(QObject *parent = 0);
+    ~WorkerB();
 
 signals:
 
