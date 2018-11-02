@@ -2,22 +2,22 @@
 
 #include "worker.h"
 
-Worker::Worker(QObject *parent) :
+WorkerB::WorkerB(QObject *parent) :
     QObject(parent)
 {
     m_workerA = new WorkerA(this);
 
-    qDebug() << "Create Worker thread: " << QThread::currentThread();
+    qDebug() << "Create WorkerB thread: " << QThread::currentThread();
 }
 
-void Worker::doWork()
+void WorkerB::doWork()
 {  
-    qDebug() << "doWork thread: " << QThread::currentThread();
+    qDebug() << "DoWorkB thread: " << QThread::currentThread();
 
     m_workerA->doWorkA();
 }
 
-Worker::~Worker()
+WorkerB::~WorkerB()
 {
     //delete m_workerTimer;
 }
