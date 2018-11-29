@@ -11,7 +11,7 @@ class WorkerA: public QObject
 public:
     inline explicit WorkerA(QObject *parent = 0)
     {
-        m_net1 = new QNetworkAccessManager(this);
+        m_net1 = new QNetworkAccessManager(nullptr);
 
         qDebug() << "Create WorkerA thread: " << QThread::currentThread();
     }
